@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Video</title>
+<title>Vídeo</title>
 <style>
   html, body {
     margin: 0;
     padding: 0;
-    background: black;
     height: 100%;
+    background: black;
     overflow: hidden;
   }
   video {
@@ -21,18 +21,14 @@
 </head>
 <body>
 
-<video autoplay muted playsinline>
-  <source src="HYDRA 2026 (1)".mp4" type="HYDRA 2026 (1).mp4">
+<video autoplay muted playsinline loop>
+  <source src="video.mp4" type="sao jorge/mp4">
 </video>
 
 <script>
   const video = document.querySelector("video");
-
-  // força tela cheia ao tocar
   document.body.addEventListener("click", () => {
-    if (video.requestFullscreen) {
-      video.requestFullscreen();
-    }
+    if (video.requestFullscreen) video.requestFullscreen();
     video.muted = false;
     video.play();
   });
